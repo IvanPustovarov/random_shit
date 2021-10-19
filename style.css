@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+}
+
+.container{ 
+    background-color: aquamarine;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.pixel{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+}
