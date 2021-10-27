@@ -66,15 +66,6 @@ const createAndCheckRightLine = (array) => {
       counter = 0;
     }
   }
-
-  // for (let index = 0; index < array.length; index++) {
-  //   const cell = array[index];
-  //   const nextCell = array[index + 1];
-  //   if(index === array.length - 1) {
-  //      return;
-  //   }
-  //   if (cell._set === nextCell._set) cell.rightLine = 1;
-  // }
 };
 
 const createAndCheckBottomLine = (array) => {
@@ -182,8 +173,9 @@ const maze = (column, row) => {
   setUniqueMultiplicity(rowLine);
   const lastLine = addBottomLine(rowLine);
   destroyRight(lastLine, maze);
-  console.log("maze:", maze);
   return maze;
 };
 
 maze(column, row);
+
+export {maze};
