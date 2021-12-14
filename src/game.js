@@ -8,22 +8,23 @@ export default class Game {
 
   async init() {
     this.view.init();
+    this.world.level = this.level;
 
     document.addEventListener("keydown", (event) => {
       event.preventDefault();
 
       switch (event.code) {
         case "ArrowRight":
-          this.world.playerCube.x += 60;
+          this.world.playerCube.x += this.world.playerCube.height;
           break;
         case "ArrowLeft":
-          this.world.playerCube.x -= 60;
+          this.world.playerCube.x -= this.world.playerCube.height;
           break;
         case "ArrowUp":
-          this.world.playerCube.y -= 60;
+          this.world.playerCube.y -= this.world.playerCube.height;
           break;
         case "ArrowDown":
-          this.world.playerCube.y += 60;
+          this.world.playerCube.y += this.world.playerCube.height;
           break;
       }
     });
